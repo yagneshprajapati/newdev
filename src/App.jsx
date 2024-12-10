@@ -32,7 +32,7 @@ const App = () => {
               <button onClick={handleLogout}>Back to Login</button>
             </div>
           } />
-          <Route path="/:feature" element={isLogged ? <FeaturePage /> : <Login onLogin={handleLogin} />} />
+          <Route path="/:feature" element={<FeaturePage /> } />
           <Route path="/" element={isLogged ? <LandingScreen /> : <Login onLogin={handleLogin} />} />
         </Routes>
         <ChatWindow />
