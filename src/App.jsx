@@ -1,6 +1,5 @@
-// src/App.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Login from './components/Login';
@@ -25,15 +24,21 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
-          <Route path="/logout" element={
-            <div className="logout-page">
-              <h1>Logged Out</h1>
-              <p>Thank you for using Legal Tech. See you soon!</p>
-              <button onClick={handleLogout}>Back to Login</button>
-            </div>
-          } />
-          <Route path="/:feature" element={<FeaturePage /> } />
-          <Route path="/" element={isLogged ? <LandingScreen /> : <Login onLogin={handleLogin} />} />
+          <Route
+            path="/logout"
+            element={
+              <div className="logout-page">
+                <h1>Logged Out</h1>
+                <p>Thank you for using Legal Tech. See you soon!</p>
+                <button onClick={handleLogout}>Back to Login</button>
+              </div>
+            }
+          />
+          <Route path="/:feature" element={<FeaturePage />} />
+          <Route
+            path="/"
+            element={ <LandingScreen /> }
+          />
         </Routes>
         <ChatWindow />
         <Footer />
