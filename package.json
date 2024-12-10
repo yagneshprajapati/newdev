@@ -1,5 +1,5 @@
 {
-  "website": "http:/yagneshprajapati.github.io/newdev",
+ "website": "https://yagneshprajapati.github.io/newdev",
   "name": "vite-react-starter",
   "private": false,
   "version": "1.0.0",
@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-   "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist",
+"predeploy": "npm run build",
+"deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
